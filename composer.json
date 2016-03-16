@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CodeBlastr\\MultiSite\\": "src"
+            "CodeBlastr\\MultiSite\\": "vendor/codeblastr/multisite/test"
         }
     },
     "minimum-stability": "dev",
