@@ -1,0 +1,26 @@
+{
+    "name": "codeblastr/cakephp3-multisite",
+    "description": "A multi-site plugin for CakePHP 3.x, which lets you have host multiple sites from a single CakePHP install.",
+    "type": "cakephp-plugin",
+    "keywords": [
+        "cakephp",
+        "multisite"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Kersey",
+            "homepage": "http://www.richardkersey.com",
+            "role": "Author"
+        },
+        {
+            "name": "Others",
+            "homepage": "https://github.com/codeblastr/cakephp3-multisite/graphs/contributors"
+        }
+    ],
+    "require": {
+        "cakephp/cakephp": "~3.2"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
