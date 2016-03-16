@@ -3,8 +3,12 @@ A plugin that allows you to have a single Cakephp 3.x install support multiple w
 
 ## Install
 
+```php
 // In console run
-``composer require codeblastr/cakephp3-multisite``
+composer require codeblastr/cakephp3-multisite
+```
 
+```php
 // In config/bootstrap.php
 Plugin::load('CodeBlastr/Multisite');
+```
