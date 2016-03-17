@@ -100,7 +100,7 @@ if (!empty($domains[$_SERVER['HTTP_HOST']])) {
 ```
 
 
-If there is a plugin  that you want individual sites to have access to customize/override you need to add it to the
+If there is a plugin  that you want individual sites to have access to customize or override you need to add it to the
 autoload parameter of your main ``APP/composer.json`` file.
 Formatted as ``"VendorName\\PluginName\\": "./SITE_DIR/vendor/[vendor name]/[plugin name]/src"``, for example...
 
