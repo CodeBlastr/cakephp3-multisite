@@ -3,7 +3,7 @@ namespace CodeBlastr\MultiSite\View;
 
 use Cake\Core\App;
 use Cake\Utility\Inflector;
-use Cake\View;
+use Cake\View\View;
 
 /**
  * MultiSite View
@@ -32,7 +32,7 @@ use Cake\View;
  * define('SITE_DIR', 'sites/' . $_SERVER['HTTP_HOST']);
  *
  */
-class MultiSiteView extends Cake/View
+class MultiSiteView extends View
 {
     /**
      * Paths for multi-site templates support.
