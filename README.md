@@ -42,7 +42,7 @@ In APP/config/app.php set App.paths.templates to this :
 		],
 	],
 ],
-``
+```
 
 
 Create a folder and file at APP/sites/bootstrap.php (these are examples, change the names to domains that you actually want to use)
