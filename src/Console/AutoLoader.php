@@ -1,5 +1,5 @@
 <?php
-namespace CodeBlastr\Multisite\Console;
+namespace CodeBlastr\MultiSite\Console;
 
 use Composer\Script\Event;
 
