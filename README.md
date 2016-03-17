@@ -45,7 +45,9 @@ In APP/config/app.php set App.paths.templates like this:
 	'paths' => [
 		'templates' => [
 			ROOT . DS . SITE_DIR . DS . 'vendor' . DS . '%s' . DS . 'src' . DS . 'Template',
-			APP . 'Template' . DS
+			ROOT . DS . SITE_DIR . DS . 'src' . DS . 'Template' . DS,
+			APP . 'Template' . DS,
+			CORE_PATH . 'src'. DS . 'Template' . DS
 		],
 	],
 ],
