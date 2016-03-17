@@ -68,13 +68,13 @@ protected function _paths($plugin = null, $cached = true)
 }
 ```
 
+
+## Usage
+
  - Create a folder at APP/sites/example.com and APP/sites/example-app-folder.
  - Within those folders you can create custom versions of core app files.
     - ex. APP/sites/example.com/config/app.php (create your own db connection here)
     - ex. APP/sites/example-app-folder/config/app.php (create a different db connection for this site here)
-
-
-## Usage
 
 Create a folder and file at APP/sites/bootstrap.php <sup><sub>(these are examples, change the names to domains that you actually want to use)</sub></sup>
 ```php
@@ -100,8 +100,8 @@ if (!empty($domains[$_SERVER['HTTP_HOST']])) {
 ```
 
 
-If there is a plugin which you want to allow individual sites to override, you need to add it to the
-autoload parameter of your main app composer.json file.
+If there is a plugin  that you want individual sites to have access to customize/override you need to add it to the
+autoload parameter of your main ``APP/composer.json`` file.
 Formatted as ``"VendorName\\PluginName\\": "./SITE_DIR/vendor/[vendor name]/[plugin name]/src"``, for example...
 
 
@@ -114,4 +114,9 @@ Formatted as ``"VendorName\\PluginName\\": "./SITE_DIR/vendor/[vendor name]/[plu
         "CodeBlastr\\Multisite\\": "./SITE_DIR/vendor/codeblastr/multisite/src"
     }
 },
+```
+
+Anytime you add a new plugin to this autoload you'll need to run this in console
+```php
+composer dump-autoload
 ```
