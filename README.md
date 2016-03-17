@@ -1,21 +1,29 @@
-# cakephp3-multisite
+# Multisite Support for CakePHP 3.x
 A plugin that allows you to have a single Cakephp 3.x install support multiple websites. 
 
 ## Install
 
+In console run
 ```php
-// In console run
 composer require codeblastr/multisite
 ```
-
+Replace the first 6 lines  of APP/config/bootstrap.php with the following. (It's **important** to load the plugin in this place because we need access to the constant SITE_DIR defined early on. 
 ```php
-// In APP/config/bootstrap.php
-Plugin::load('CodeBlastr/MultiSite');
+<?php
+/**
+ * Configure paths required to find CakePHP + general filepath
+ * constants
+ */
+require __DIR__ . '/paths.php';
+
+/**
+ * Get multisites
+ */
+Plugin::load('CodeBlastr/MultiSite', ['bootstrap' => true]);
 ```
 
+In APP/composer.json add "App\\Console\\AutoLoader::postAutoloadDump" to "post-autoload-dump" like this
 ```php
-// In APP/composer.json add "App\\Console\\AutoLoader::postAutoloadDump" to "post-autoload-dump" like this
-
 "scripts": {
     "post-install-cmd": "App\\Console\\Installer::postInstall",
     "post-autoload-dump": [
