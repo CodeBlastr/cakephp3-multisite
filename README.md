@@ -28,7 +28,7 @@ require __DIR__ . '/paths.php';
 require ROOT . DS . 'sites' . DS . 'bootstrap.php';
 ```
 
-In APP/composer.json add ```"CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"`` to ```"post-autoload-dump"`` like this
+In APP/composer.json add ```"CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"`` to ``"post-autoload-dump"`` like this
 ```php
 "scripts": {
     "post-install-cmd": "App\\Console\\Installer::postInstall",
