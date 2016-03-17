@@ -5,7 +5,7 @@ A plugin that allows you to have a single Cakephp 3.x install support multiple w
 
 ```php
 // In console run
-composer require codeblastr/cakephp3-multisite
+composer require codeblastr/multisite
 ```
 
 ```php
