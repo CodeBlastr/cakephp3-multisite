@@ -23,6 +23,7 @@ Plugin::load('CodeBlastr/Multisite');
         "CodeBlastr\\Multisite\\Console\\AutoLoader::postAutoloadDump"
     ]
 },
+```
 
 ## Usage
 
