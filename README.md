@@ -1,5 +1,10 @@
 # Multisite Support for CakePHP 3.x
-A plugin that allows you to have a single Cakephp 3.x install support multiple websites. 
+A plugin that allows you to have a single Cakephp 3.x install support multiple websites
+and customize individual files on a per site basis.
+
+For example: if a request is made to example.com, you might have some files like
+``APP/sites/example.com/config/app.php``, and ``APP/sites/example.com/vendor/CakeDC/Users/src/Controllers/UsersController.php``,
+both of which would override the respective default file in the APP on a per site basis.
 
 ## Installation
 
