@@ -46,6 +46,28 @@ In APP/config/app.php set App.paths.templates to this :
 ],
 ```
 
+In APP/src/View/AppView.php add both of the following
+```php
+// near the top of the file, outside of class AppView()
+
+use CodeBlastr\MultiSite\View\MultisiteView;
+
+// inside of class AppView()
+/**
+ * Overwrites Cake/View::_paths()
+ *
+ * @param null $plugin
+ * @param bool $cached
+ * @return mixed
+ */
+protected function _paths($plugin = null, $cached = true)
+{
+	$multisite = new MultisiteView();
+	$multisite->theme = $this->theme;
+	return $multisite->_paths($plugin, $cached);
+}
+```
+
  - Create a folder at APP/sites/example.com and APP/sites/example-app-folder.
  - Within those folders you can create custom versions of core app files.
     - ex. APP/sites/example.com/config/app.php (create your own db connection here)
