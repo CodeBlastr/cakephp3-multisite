@@ -9,10 +9,20 @@ composer require codeblastr/cakephp3-multisite
 ```
 
 ```php
-// In config/bootstrap.php
+// In APP/config/bootstrap.php
 Plugin::load('CodeBlastr/Multisite');
 ```
 
+```php
+// In APP/composer.json add "App\\Console\\AutoLoader::postAutoloadDump" to "post-autoload-dump" like this
+
+"scripts": {
+    "post-install-cmd": "App\\Console\\Installer::postInstall",
+    "post-autoload-dump": [
+        "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
+        "CodeBlastr\\Multisite\\Console\\AutoLoader::postAutoloadDump"
+    ]
+},
 
 ## Usage
 
