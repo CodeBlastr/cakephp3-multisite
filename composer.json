@@ -12,10 +12,6 @@
             "name": "Richard Kersey",
             "homepage": "http://www.richardkersey.com",
             "role": "Author"
-        },
-        {
-            "name": "Others",
-            "homepage": "https://github.com/codeblastr/cakephp3-multisite/graphs/contributors"
         }
     ],
     "require": {
