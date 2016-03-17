@@ -1,5 +1,5 @@
 # Multisite Support for CakePHP 3.x
-A plugin that allows you to have a single Cakephp 3.x which supports multiple websites, while being
+A plugin that allows you to have a single Cakephp 3.x app which supports multiple websites, while being
 flexible enough that you can customize individual files on a per site basis.
 
 For example: if a request is made to example.com, you might have some files like
