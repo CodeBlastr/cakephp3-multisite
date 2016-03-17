@@ -21,10 +21,10 @@ If there is a plugin which you want to allow sites to override, you need to add 
 ```php
 // APP/composer.json
 
-    "autoload": {
-        "psr-4": {
-            "App\\": "src",
-            "CodeBlastr\\Multisite\\": "./SITE_DIR/vendor/codeblastr/multisite/src"
-        }
-    },
+"autoload": {
+    "psr-4": {
+        "App\\": "src",
+        "CodeBlastr\\Multisite\\": "./SITE_DIR/vendor/codeblastr/multisite/src"
+    }
+},
 ```
