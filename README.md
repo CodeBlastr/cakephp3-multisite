@@ -34,7 +34,7 @@ In APP/composer.json add "App\\Console\\AutoLoader::postAutoloadDump" to "post-a
 ```
 
 Create a folder and file at APP/sites/bootstrap.php (these are examples, change the names to domains that you actually want to use)
-```
+```php
 <?php
 /**
  * Map domains this install will support, to where that site's files are located.
