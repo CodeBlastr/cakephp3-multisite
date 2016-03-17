@@ -28,7 +28,7 @@ require __DIR__ . '/paths.php';
 require ROOT . DS . 'sites' . DS . 'bootstrap.php';
 ```
 
-In APP/composer.json add ```"CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"`` to ``"post-autoload-dump"`` like this
+In APP/composer.json add ```"CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"`` to ``"post-autoload-dump"`` like this:
 ```php
 "scripts": {
     "post-install-cmd": "App\\Console\\Installer::postInstall",
@@ -39,7 +39,7 @@ In APP/composer.json add ```"CodeBlastr\\MultiSite\\Console\\AutoLoader::postAut
 },
 ```
 
-In APP/config/app.php set App.paths.templates to this :
+In APP/config/app.php set App.paths.templates like this:
 ```php
 'App' => [
 	'paths' => [
@@ -51,7 +51,7 @@ In APP/config/app.php set App.paths.templates to this :
 ],
 ```
 
-In APP/src/View/AppView.php add both of the following
+In APP/src/View/AppView.php add both of the following:
 ```php
 // near the top of the file, outside of class AppView()
 
