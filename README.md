@@ -7,7 +7,8 @@ In console run
 ```php
 composer require codeblastr/multisite
 ```
-Replace the first 6 lines  of APP/config/bootstrap.php with the following. (It's **important** to load the plugin in this place because we need access to the constant SITE_DIR defined early on. 
+
+Replace the first 6 lines  of APP/config/bootstrap.php with the following.
 ```php
 <?php
 /**
@@ -19,7 +20,7 @@ require __DIR__ . '/paths.php';
 /**
  * Get multisites
  */
-Plugin::load('CodeBlastr/MultiSite', ['bootstrap' => true]);
+require ROOT . DS . 'sites' . DS . 'bootstrap.php';
 ```
 
 In APP/composer.json add "App\\Console\\AutoLoader::postAutoloadDump" to "post-autoload-dump" like this
@@ -44,6 +45,13 @@ In APP/config/app.php set App.paths.templates to this :
 ],
 ```
 
+ - Create a folder at APP/sites/example.com and APP/sites/example-app-folder.
+ - Within those folders you can create custom versions of core app files.
+    - ex. APP/sites/example.com/config/app.php (create your own db connection here)
+    - ex. APP/sites/example-app-folder/config/app.php (create a different db connection for this site here)
+
+
+## Usage
 
 Create a folder and file at APP/sites/bootstrap.php <sup><sub>(these are examples, change the names to domains that you actually want to use)</sub></sup>
 ```php
@@ -68,15 +76,11 @@ if (!empty($domains[$_SERVER['HTTP_HOST']])) {
 }
 ```
 
- - Create a folder at APP/sites/example.com and APP/sites/example-app-folder.
- - Within those folders you can create custom versions of core app files.
-    - ex. APP/sites/example.com/config/app.php (create your own db connection here)
-    - ex. APP/sites/example-app-folder/config/app.php (create a different db connection for this site here)
 
+If there is a plugin which you want to allow individual sites to override, you need to add it to the
+autoload parameter of your main app composer.json file.
+Formatted as ``"VendorName\\PluginName\\": "./SITE_DIR/vendor/[vendor name]/[plugin name]/src"``, for example...
 
-## Usage
-
-If there is a plugin which you want to allow sites to override, you need to add it to the autoload parameter of your main app composer.json file.  Formatted as ``"VendorName\\PluginName\\": "./SITE_DIR/vendor/[vendor name]/[plugin name]/src"``, for example...
 
 ```php
 // APP/composer.json
