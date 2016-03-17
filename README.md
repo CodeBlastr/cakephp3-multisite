@@ -33,6 +33,18 @@ In APP/composer.json add "App\\Console\\AutoLoader::postAutoloadDump" to "post-a
 },
 ```
 
+In APP/config/app.php set App.paths.templates to this :
+```php
+'App' => [
+	'paths' => [
+		'templates' => [
+			ROOT . DS . SITE_DIR . DS . 'vendor' . DS . '%s' . DS . 'src' . DS . 'Template',
+		],
+	],
+],
+``
+
+
 Create a folder and file at APP/sites/bootstrap.php (these are examples, change the names to domains that you actually want to use)
 ```php
 <?php
