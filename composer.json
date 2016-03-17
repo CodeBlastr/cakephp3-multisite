@@ -1,5 +1,5 @@
 {
-    "name": "codeblastr/cakephp3-multisite",
+    "name": "codeblastr/multisite",
     "description": "A multi-site plugin for CakePHP 3.x, which lets you have host multiple sites from a single CakePHP install.",
     "type": "cakephp-plugin",
     "keywords": [
