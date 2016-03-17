@@ -10,7 +10,7 @@ composer require codeblastr/multisite
 
 ```php
 // In APP/config/bootstrap.php
-Plugin::load('CodeBlastr/Multisite');
+Plugin::load('CodeBlastr/MultiSite');
 ```
 
 ```php
@@ -20,7 +20,7 @@ Plugin::load('CodeBlastr/Multisite');
     "post-install-cmd": "App\\Console\\Installer::postInstall",
     "post-autoload-dump": [
         "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
-        "CodeBlastr\\Multisite\\Console\\AutoLoader::postAutoloadDump"
+        "CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"
     ]
 },
 ```
