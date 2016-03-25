@@ -81,7 +81,6 @@ class MultiSiteView extends View
             $templatePaths,
             [dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Template' . DIRECTORY_SEPARATOR]
         );
-
         if ($plugin !== null) {
             return $this->_pathsForPlugin[$plugin] = $paths;
         }
