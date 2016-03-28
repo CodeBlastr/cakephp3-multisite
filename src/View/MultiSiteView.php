@@ -23,7 +23,15 @@ use Cake\View\View;
  * ex.3  APP/sites/example.com/vendor/VendorName/PluginName/src/Template/Layout/default.ctp
  *
  * In APP/config/app.php set App.paths.templates to this :
- * ``ROOT . DS . SITE_DIR . DS . 'vendor' . DS . '%s' . DS . 'src' . DS . 'Template'``
+ * ```php
+ * 'paths' => [
+ *     'plugins' => [ROOT . DS . 'plugins' . DS],'templates' => [
+ *     ROOT . DS . SITE_DIR . DS . 'vendor' . DS . '%s' . DS . 'src' . DS . 'Template',
+ *     ROOT . DS . SITE_DIR . DS . 'src' . DS . 'Template' . DS,
+ *     APP . 'Template' . DS,
+ *     CORE_PATH . 'src'. DS . 'Template' . DS
+ * ],
+ * ```
  *
  * In App/config/bootstrap.php add this after the first require :
  * ``require ROOT . DS . 'sites' . DS . 'bootstrap.php';``
