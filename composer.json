@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GoBigMulty\\": "src"
+            "CodeBlastrMultisite\\": "src"
         }
     },
     "minimum-stability": "dev",
