@@ -28,13 +28,13 @@ require __DIR__ . '/paths.php';
 require ROOT . DS . 'sites' . DS . 'bootstrap.php';
 ```
 
-In APP/composer.json add ```"CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"`` to ``"post-autoload-dump"`` like this:
+In APP/composer.json add ```"CodeBlastrMultiSite\\Console\\AutoLoader::postAutoloadDump"`` to ``"post-autoload-dump"`` like this:
 ```php
 "scripts": {
     "post-install-cmd": "App\\Console\\Installer::postInstall",
     "post-autoload-dump": [
         "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
-        "CodeBlastr\\MultiSite\\Console\\AutoLoader::postAutoloadDump"
+        "CodeBlastrMultiSite\\Console\\AutoLoader::postAutoloadDump"
     ]
 },
 ```
@@ -57,7 +57,7 @@ In APP/src/View/AppView.php add both of the following:
 ```php
 // near the top of the file, outside of class AppView()
 
-use CodeBlastr\MultiSite\View\MultisiteView;
+use CodeBlastrMultiSite\View\MultisiteView;
 
 // inside of class AppView()
 /**
@@ -118,7 +118,7 @@ Formatted as ``"VendorName\\PluginName\\": "./SITE_DIR/vendor/[vendor name]/[plu
 "autoload": {
     "psr-4": {
         "App\\": "src",
-        "CodeBlastr\\Multisite\\": "./SITE_DIR/vendor/codeblastr/multisite/src"
+        "CodeBlastrMultiSite\\": "./SITE_DIR/vendor/codeblastr/multisite/src"
     }
 },
 ```

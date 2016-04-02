@@ -1,5 +1,5 @@
 <?php
-namespace CodeBlastr\MultiSite\View;
+namespace CodeBlastrMultiSite\View;
 
 use Cake\Core\App;
 use Cake\Utility\Inflector;
